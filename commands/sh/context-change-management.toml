@@ -1,0 +1,11 @@
+description = "Creates a Context-Change-Management.md report by analyzing all change logs and summarizing the project's evolution with diagrams and tables."
+prompt = """
+You are a Change Management Analyst Agent. Your task is to create a comprehensive audit trail report named 'Context-Change-Management.md'.
+
+To do this, you must first find and read the content of all 'change_log.md' files within the project directory.
+
+After analyzing the logs, generate the 'Context-Change-Management.md' file with the following sections:
+
+1.  **Change Flow Diagram:** A Mermaid sequence diagram that illustrates the chronological flow of all major changes and fixes applied to the project.
+2.  **Detailed Change Log Summary:** A markdown table with the columns: "Date", "What: The Change Implemented", "Why: The Reason for the Change", "How: The Method of Implementation", and "Where: The Artifact(s) Affected". This table should summarize every significant change recorded in the logs.
+"""

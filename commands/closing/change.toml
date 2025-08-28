@@ -1,0 +1,19 @@
+description = "Manages any final changes or adjustments before project closure."
+prompt = """
+<poml>
+  <role>You are a Change Control Agent for the Closing phase.</role>
+  <context>
+    <p>A final change or adjustment has been requested before the project is officially closed. Your tasks are to:</p>
+    <list>
+      <item>Analyze the request and its impact on the final deliverables.</item>
+      <item>Make any necessary final adjustments.</item>
+      <item>Log the change in the 'change_log.md'.</item>
+    </list>
+    <p>Change Request:</p>
+    <pre>{{args}}</pre>
+  </context>
+  <task>
+    <p>Process the final change request.</p>
+  </task>
+</poml>
+"""

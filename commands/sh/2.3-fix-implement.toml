@@ -1,0 +1,19 @@
+description = "Starts the Azure VM for Ollama/SearXNG, then updates the local LiteLLM config to use them."
+prompt = """
+This is a troubleshooting and configuration task.
+
+First, using the 'azure-cli' MCP, execute a command to start the Azure VM named 'ollama-searxng-vm' which is located in the 'ai-multimodal-rg' resource group.
+
+After confirming the VM has started, modify the 'src/config/config.yaml' file. Append the following model definitions to the 'model_list' section to make Ollama and SearXNG available through the LiteLLM proxy:
+
+- model_name: ollama/llama2
+  litellm_params:
+    model: ollama/llama2
+    api_base: "http://20.52.228.232:11434"
+- model_name: searxng
+  litellm_params:
+    model: searxng
+    api_base: "http://20.52.228.232:8080"
+
+Finally, add 'ollama/llama2' and 'searxng' to the list of available models for the 'lobe-chat-key-1' virtual key in the same 'config.yaml' file.
+"""

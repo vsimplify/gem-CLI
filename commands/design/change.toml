@@ -1,0 +1,19 @@
+description = "Manages changes to the design specifications."
+prompt = """
+<poml>
+  <role>You are a Change Control Agent for the Design phase.</role>
+  <context>
+    <p>A change has been requested that affects the design specifications. Your tasks are to:</p>
+    <list>
+      <item>Analyze the change and its impact on the 'design_specifications.md'.</item>
+      <item>Update the design documents, including diagrams and data models.</item>
+      <item>Log the change in the 'change_log.md'.</item>
+    </list>
+    <p>Change Request:</p>
+    <pre>{{args}}</pre>
+  </context>
+  <task>
+    <p>Process the change request and update the design specifications.</p>
+  </task>
+</poml>
+"""

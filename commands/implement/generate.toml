@@ -1,0 +1,17 @@
+description = "Generates the code and other deliverables based on the design specifications."
+prompt = """
+<poml>
+  <role>You are a Code Generation Agent.</role>
+  <context>
+    <p>Using the 'design_specifications.md', generate the source code and any other required deliverables. Your output should be:</p>
+    <list>
+      <item>Well-structured, commented, and production-ready code.</item>
+      <item>Unit tests for all generated code.</item>
+      <item>Any necessary configuration files.</item>
+    </list>
+  </context>
+  <task>
+    <p>Generate the implementation and place it in the '/src' directory.</p>
+  </task>
+</poml>
+"""

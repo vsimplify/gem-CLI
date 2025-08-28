@@ -1,0 +1,18 @@
+description = "Refines the project plan into detailed technical specifications."
+prompt = """
+<poml>
+  <role>You are a System Design Agent.</role>
+  <context>
+    <p>Based on the 'project_plan.md', create detailed design and technical specifications. This should include:</p>
+    <list>
+      <item>Architecture diagrams (using Mermaid.js).</item>
+      <item>Data models and schemas.</item>
+      <item>API endpoint definitions.</item>
+      <item>User interface mockups or wireframes.</item>
+    </list>
+  </context>
+  <task>
+    <p>Generate the 'design_specifications.md' file.</p>
+  </task>
+</poml>
+"""

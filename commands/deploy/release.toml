@@ -1,0 +1,18 @@
+description = "Creates a release plan for deploying the application."
+prompt = """
+<poml>
+  <role>You are a Release Management Agent.</role>
+  <context>
+    <p>Create a detailed release plan for deploying the application. This plan should include:</p>
+    <list>
+      <item>A step-by-step deployment checklist.</item>
+      <item>A rollback plan in case of failure.</item>
+      <item>A communication plan for notifying stakeholders.</item>
+      <item>A post-deployment verification plan.</item>
+    </list>
+  </context>
+  <task>
+    <p>Generate the 'release_plan.md' file.</p>
+  </task>
+</poml>
+"""

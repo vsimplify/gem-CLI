@@ -1,0 +1,6 @@
+2025-07-04T13:38:53.334-07:00  INFO 3370 --- [azure-cli-mcp] [main] i.g.j.a.AzureCliMcpApplication           : Starting AzureCliMcpApplication v0.0.6 using Java 17.0.15 with PID 3370 (/Volumes/T7/dev/mcp/azure/azure-cli-mcp.jar started by karan in /Users/karan/.gemini)
+2025-07-04T13:38:53.338-07:00  INFO 3370 --- [azure-cli-mcp] [main] i.g.j.a.AzureCliMcpApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-07-04T13:38:53.919-07:00  INFO 3370 --- [azure-cli-mcp] [main] o.s.a.a.m.s.MpcServerAutoConfiguration   : Registered tools1 notification: true
+2025-07-04T13:38:53.965-07:00  INFO 3370 --- [azure-cli-mcp] [pool-2-thread-1] i.m.server.McpAsyncServer                : Client initialize request - Protocol: 2025-03-26, Capabilities: ClientCapabilities[experimental=null, roots=null, sampling=null], Info: Implementation[name=Roo Code, version=3.22.6]
+2025-07-04T13:38:53.968-07:00  WARN 3370 --- [azure-cli-mcp] [pool-2-thread-1] i.m.server.McpAsyncServer                : Client requested unsupported protocol version: 2025-03-26, so the server will sugggest the 2024-11-05 version instead
+2025-07-04T13:38:54.075-07:00  INFO 3370 --- [azure-cli-mcp] [main] i.g.j.a.AzureCliMcpApplication           : Started AzureCliMcpApplication in 1.048 seconds (process running for 1.421)

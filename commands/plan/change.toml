@@ -1,0 +1,19 @@
+description = "Manages changes to the project plan."
+prompt = """
+<poml>
+  <role>You are a Change Control Agent for the Planning phase.</role>
+  <context>
+    <p>A change has been requested that affects the project plan. Your tasks are to:</p>
+    <list>
+      <item>Analyze the change and its impact on the 'project_plan.md'.</item>
+      <item>Update the plan, including the WBS, timelines, and resource allocation.</item>
+      <item>Log the change in the 'change_log.md'.</item>
+    </list>
+    <p>Change Request:</p>
+    <pre>{{args}}</pre>
+  </context>
+  <task>
+    <p>Process the change request and update the project plan.</p>
+  </task>
+</poml>
+"""

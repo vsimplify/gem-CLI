@@ -1,0 +1,33 @@
+description = "Automates the system test plan for LobeChat and LiteLLM using the playwright MCP. Navigates UIs, runs tests, and generates a test report with screenshots."
+prompt = """
+This is an automated testing task. First, create a directory at '/src/docs/img'. Then, execute the following test plan using the 'playwright' MCP, creating a final report.
+
+**Test Case 01: Basic Connectivity**
+1. Navigate to 'http://localhost:3000'.
+2. Take a screenshot and save it as '/src/docs/img/TC01_LobeChat_UI.png'.
+3. Navigate to 'http://localhost:4000'.
+4. Take a screenshot and save it as '/src/docs/img/TC01_LiteLLM_UI.png'.
+
+**Test Case 02: OpenRouter Model Routing**
+1. Navigate to 'http://localhost:3000'.
+2. Click the element for model selection, then click the 'openrouter/openai/gpt-oss-20b:free' option.
+3. Type 'Hello, who are you?' into the chat input field.
+4. Click the send button.
+5. Wait for 5 seconds for the response to appear.
+6. Take a screenshot and save it as '/src/docs/img/TC02_LobeChat_Response.png'.
+7. Navigate to 'http://localhost:4000'.
+8. Take a screenshot and save it as '/src/docs/img/TC02_LiteLLM_Dashboard.png'.
+
+**Test Case 03: Azure OpenAI Model Routing**
+1. Navigate to 'http://localhost:3000'.
+2. Click the element for model selection, then click the 'azure-gpt-4o-mini' option.
+3. Type 'What is the capital of France?' into the chat input field.
+4. Click the send button.
+5. Wait for 5 seconds for the response to appear.
+6. Take a screenshot and save it as '/src/docs/img/TC03_LobeChat_Response.png'.
+7. Navigate to 'http://localhost:4000'.
+8. Take a screenshot and save it as '/src/docs/img/TC03_LiteLLM_Dashboard.png'.
+
+**Final Step: Generate Report**
+After all tests are complete, create a new markdown file at '/src/docs/testReport.md'. This file should be titled 'Automated Test Execution Report' and must include a section for each test case, listing the status as 'Executed' and embedding the corresponding screenshots with relative paths (e.g., './img/TC01_LobeChat_UI.png').
+"""

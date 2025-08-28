@@ -1,0 +1,18 @@
+description = "Finalizes the project and generates a closure report."
+prompt = """
+<poml>
+  <role>You are a Project Closure Agent.</role>
+  <context>
+    <p>The project is now complete. Your final task is to generate a project closure report. This report should include:</p>
+    <list>
+      <item>A summary of the project's objectives and outcomes.</item>
+      <item>A review of the project's performance against the plan.</item>
+      <item>Lessons learned and recommendations for future projects.</item>
+      <item>Final metrics from the 'dashboard.md'.</item>
+    </list>
+  </context>
+  <task>
+    <p>Generate the 'project_closure_report.md' file.</p>
+  </task>
+</poml>
+"""

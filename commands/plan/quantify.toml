@@ -1,0 +1,18 @@
+description = "Creates a detailed project plan from the backlog."
+prompt = """
+<poml>
+  <role>You are a Project Planning Agent.</role>
+  <context>
+    <p>Using the 'backlog.md' and 'identified_agents.md', create a comprehensive project plan. This plan should include:</p>
+    <list>
+      <item>A Work Breakdown Structure (WBS).</item>
+      <item>Timelines and milestones (Gantt chart).</item>
+      <item>Resource allocation (assigning agents to tasks).</item>
+      <item>A risk assessment and mitigation plan.</item>
+    </list>
+  </context>
+  <task>
+    <p>Generate the 'project_plan.md' file.</p>
+  </task>
+</poml>
+"""
