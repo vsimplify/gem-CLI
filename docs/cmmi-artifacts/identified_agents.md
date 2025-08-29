@@ -11,4 +11,4 @@
 
 | Agent Name | Description |
 |---|---|
-| Discussion Agent | Responsible for handling the context-aware discussion functionality. |
+| Discussion Agent | Responsible for initiating context-aware chat sessions by searching CMMI artifacts based on identifiers (bug ID, tag, component name), loading their content into context, and facilitating troubleshooting with the user. |

@@ -1,11 +1,36 @@
-[command]
 name = "with"
-description = "Initiates a context-aware discussion session."
-args = [
-    { name = "identifier", description = "Bug ID, tag, or component name to search for.", type = "string" }
+description = "Initiate a context-aware chat session for troubleshooting."
+parameters = [
+  {
+    name = "identifier",
+    type = "string",
+    description = "Bug ID, tag, or component name to search for related artifacts."
+  },
+  {
+    name = "question",
+    type = "string",
+    description = "The question to initiate the chat session with."
+  }
 ]
-
-[script]
-command = "python"
-file = "with_command.py"
-
+steps = [
+  {
+    type = "tool_code",
+    tool_name = "search_file_content",
+    args = {
+      pattern = "{{identifier}}",
+      path = "docs/cmmi-artifacts"
+    },
+    output_to = "search_results"
+  },
+  {
+    type = "tool_code",
+    tool_name = "read_many_files",
+    args = {
+      paths = "{{search_results.files}}"
+    },
+    output_to = "artifact_content"
+  },
+  # The actual chat session initiation will be handled by the Gemini CLI agent
+  # using the 'artifact_content' as context and 'question' as the initial prompt.
+  # This TOML defines the data gathering steps for the chat.
+]

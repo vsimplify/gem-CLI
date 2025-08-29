@@ -30,9 +30,13 @@ This is the single source of truth for your project. Generated and updated by th
 - **Agent Performance Monitor:** A new section that tracks the output and effectiveness of each AI agent, grouped by phase, allowing you to identify which agents are performing best.
     
 
+### Context-Aware Discussion (`/discuss`)
+
+This new command allows you to initiate a context-aware discussion session. By providing a bug ID, tag, or component name, the command will search the `docs/cmmi-artifacts` directory for all relevant artifacts, load their content into context, and then allow you to ask questions and troubleshoot with the full context of the specific issue.
+
 ### The Change Log (`change_log.md`)
 
-Every time you use a `change.toml` command, a record is added to this central log. This creates a complete, auditable history of every modification made to the project, ensuring that the context is never lost, even when steps are re-run.
+Every time you use a `change.toml` command, a record is added to this central log. This creates a complete, auditable history of every modification made to the project, ensuring that the context is never lost, even when steps are re-run. Additionally, all artifacts created in the `docs/cmmi-artifacts` folder must now include a unique ID, relevant tags, and the associated Capability name (serving as the component identifier).
 
 ## Workflow in Action: An Activity Plan
 
