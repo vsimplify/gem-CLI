@@ -38,6 +38,14 @@ This new command allows you to initiate a context-aware discussion session. By p
 
 Every time you use a `change.toml` command, a record is added to this central log. This creates a complete, auditable history of every modification made to the project, ensuring that the context is never lost, even when steps are re-run. Additionally, all artifacts created in the `docs/cmmi-artifacts` folder must now include a unique ID, relevant tags, and the associated Capability name (serving as the component identifier).
 
+### Comprehensive Logging (`discussion_log.md`)
+
+To ensure complete traceability and auditability, all outcomes from `/discuss` commands are now logged in `discussion_log.md`. Furthermore, every prompt provided by invoking any command is also recorded. This provides a detailed history of interactions and decisions.
+
+### Explaining Concepts with Visuals
+
+To enhance clarity and understanding, this framework encourages the use of Markdown with Mermaid diagrams (e.g., sequence diagrams, flowcharts, Gantt charts, topology diagrams) to explain concepts, workflows, and system architectures. This visual approach aids in better communication and comprehension of complex ideas.
+
 ## Workflow in Action: An Activity Plan
 
 This section outlines the typical flow of activities when running a project using this framework.

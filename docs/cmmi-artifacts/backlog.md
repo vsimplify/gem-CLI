@@ -19,3 +19,11 @@
 - **Tags:** CMMI, Standards, Artifacts, Traceability
 - **Status:** To Do
 - **Priority:** High
+
+### Capability: Comprehensive Logging
+- **ID:** CL-001
+- **Name:** Enhanced Logging for Commands and Discussions
+- **Description:** Extend logging to ensure outcomes of all `/discuss` commands are recorded in `discussion_log.md`, and every prompt provided by invoking any command is also logged.
+- **Tags:** Logging, Traceability, Audit, CMMI
+- **Status:** To Do
+- **Priority:** High

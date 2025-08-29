@@ -12,3 +12,9 @@
 | Agent Name | Description |
 |---|---|
 | Discussion Agent | Responsible for initiating context-aware chat sessions by searching CMMI artifacts based on identifiers (bug ID, tag, component name), loading their content into context, and facilitating troubleshooting with the user. |
+
+## Version 1.2
+
+| Agent Name | Description |
+|---|---|
+| Logging Agent | Responsible for comprehensive logging of all command invocations and the outcomes of `/discuss` sessions, ensuring traceability and auditability. |
