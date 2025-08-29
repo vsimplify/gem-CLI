@@ -31,8 +31,26 @@ This is the single source of truth for your project. Generated and updated by th
     
 
 ### Context-Aware Discussion (`/discuss`)
+The `/discuss` command initiates a context-aware chat session, allowing for real-time troubleshooting and collaborative problem-solving. It leverages CMMI artifacts to provide relevant information, ensuring discussions are grounded in project specifics.
 
-This new command allows you to initiate a context-aware discussion session. By providing a bug ID, tag, or component name, the command will search the `docs/cmmi-artifacts` directory for all relevant artifacts, load their content into context, and then allow you to ask questions and troubleshoot with the full context of the specific issue.
+**Usage:**
+`/discuss <identifier> <question>`
+
+**Parameters:**
+*   `<identifier>`: This parameter specifies the context for the discussion. It can be:
+    *   A **Bug ID**: e.g., `/discuss BUG-001 "What is the status of this bug?"`
+    *   A **Tag**: e.g., `/discuss "BugFix" "Can we discuss the recent bug fixes?"`
+    *   A **Component Name**: e.g., `/discuss "Define2Fix" "How does the Define2Fix capability work?"`
+    *   A **File Path**: You can also provide a direct path to a CMMI artifact or any relevant file using the `@` prefix. For example, to discuss the contents of a TOML file: `/discuss @commands/discuss/with.toml "Explain the parameters defined in this TOML file."` This allows for direct context loading from specific documents.
+
+*   `<question>`: This is the initial question or prompt to kickstart the chat session. It should clearly state what you want to discuss or troubleshoot.
+
+**Outcomes:**
+Upon execution, the `/discuss` command will:
+1.  **Search for Relevant Artifacts:** Based on the provided `<identifier>`, the system will search through CMMI artifacts (e.g., backlog, identified agents, change log) to gather relevant information. If a file path is provided, the content of that file will be loaded.
+2.  **Load Context:** The retrieved information and/or file content will be loaded into the chat session as context.
+3.  **Initiate Chat Session:** A context-aware chat session will begin, allowing you to interact with the agent, ask follow-up questions, and collaboratively troubleshoot issues, with the loaded context guiding the discussion.
+
 
 ### The Change Log (`change_log.md`)
 
