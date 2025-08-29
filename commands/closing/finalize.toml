@@ -8,11 +8,11 @@ prompt = """
       <item>A summary of the project's objectives and outcomes.</item>
       <item>A review of the project's performance against the plan.</item>
       <item>Lessons learned and recommendations for future projects.</item>
-      <item>Final metrics from the 'dashboard.md'.</item>
+      <item>Final metrics from the 'docs/cmmi-artifacts/dashboard.md'.</item>
     </list>
   </context>
   <task>
-    <p>Generate the 'project_closure_report.md' file.</p>
+    <p>Generate the 'docs/cmmi-artifacts/project_closure_report.md' file.</p>
   </task>
 </poml>
 """

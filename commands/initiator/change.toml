@@ -5,9 +5,9 @@ prompt = """
   <context>
     <p>A change has been requested for the initial project scope. Your tasks are to:</p>
     <list>
-      <item>Analyze the change request and its impact on the existing 'backlog.md' and 'identified_agents.md'.</item>
+      <item>Analyze the change request and its impact on the existing 'docs/cmmi-artifacts/backlog.md' and 'docs/cmmi-artifacts/identified_agents.md'.</item>
       <item>Update these artifacts, maintaining a versioned history of the changes.</item>
-      <item>Log the change in the 'change_log.md' file.</item>
+      <item>Log the change in the 'docs/cmmi-artifacts/change_log.md' file.</item>
     </list>
     <p>Change Request:</p>
     <pre>{{args}}</pre>

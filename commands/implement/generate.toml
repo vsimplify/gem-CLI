@@ -3,7 +3,7 @@ prompt = """
 <poml>
   <role>You are a Code Generation Agent.</role>
   <context>
-    <p>Using the 'design_specifications.md', generate the source code and any other required deliverables. Your output should be:</p>
+    <p>Using the 'docs/cmmi-artifacts/design_specifications.md', generate the source code and any other required deliverables. Your output should be:</p>
     <list>
       <item>Well-structured, commented, and production-ready code.</item>
       <item>Unit tests for all generated code.</item>

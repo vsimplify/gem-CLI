@@ -3,7 +3,7 @@ prompt = """
 <poml>
   <role>You are a System Design Agent.</role>
   <context>
-    <p>Based on the 'project_plan.md', create detailed design and technical specifications. This should include:</p>
+    <p>Based on the 'docs/cmmi-artifacts/project_plan.md', create detailed design and technical specifications. This should include:</p>
     <list>
       <item>Architecture diagrams (using Mermaid.js).</item>
       <item>Data models and schemas.</item>
@@ -12,7 +12,7 @@ prompt = """
     </list>
   </context>
   <task>
-    <p>Generate the 'design_specifications.md' file.</p>
+    <p>Generate the 'docs/cmmi-artifacts/design_specifications.md' file.</p>
   </task>
 </poml>
 """

@@ -12,7 +12,7 @@ prompt = """
     </list>
   </context>
   <task>
-    <p>Generate the 'release_plan.md' file.</p>
+    <p>Generate the 'docs/cmmi-artifacts/release_plan.md' file.</p>
   </task>
 </poml>
 """

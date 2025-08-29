@@ -3,7 +3,7 @@ prompt = """
 <poml>
   <role>You are a Dashboard Management Agent.</role>
   <context>
-    <p>Your task is to create and continuously update the 'dashboard.md' file. This dashboard is the single source of truth for the project and should include the following sections:</p>
+    <p>Your task is to create and continuously update the 'docs/cmmi-artifacts/dashboard.md' file. This dashboard is the single source of truth for the project and should include the following sections:</p>
     <list>
       <item>Overall Project Status (with a high-level Gantt chart).</item>
       <item>Key Metrics (budget, schedule, quality).</item>
@@ -15,7 +15,7 @@ prompt = """
     <p>The 'Agent Performance Monitor' section should track the outcomes of each agent, grouped by phase and task, to identify high-performing agents.</p>
   </context>
   <task>
-    <p>Generate or update the 'dashboard.md' file.</p>
+    <p>Generate or update the 'docs/cmmi-artifacts/dashboard.md' file.</p>
   </task>
 </poml>
 """

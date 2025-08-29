@@ -7,13 +7,13 @@ prompt = """
     <list>
       <item>Analyze the requirements to create a detailed, CMMI-compliant project backlog.</item>
       <item>Identify all the specialized AI agents (Identified Agents) needed to execute the project.</item>
-      <item>Generate two files: 'backlog.md' and 'identified_agents.md'.</item>
+      <item>Generate two files: 'docs/cmmi-artifacts/backlog.md' and 'docs/cmmi-artifacts/identified_agents.md'.</item>
     </list>
     <p>User Requirements (POML):</p>
     <pre>{{args}}</pre>
   </context>
   <task>
-    <p>Generate the 'backlog.md' and 'identified_agents.md' files based on the provided requirements.</p>
+    <p>Generate the 'docs/cmmi-artifacts/backlog.md' and 'docs/cmmi-artifacts/identified_agents.md' files based on the provided requirements.</p>
   </task>
 </poml>
 """

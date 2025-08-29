@@ -7,7 +7,7 @@ prompt = """
     <list>
       <item>Analyze the change and its impact on the codebase.</item>
       <item>Update the code and associated unit tests.</item>
-      <item>Log the change in the 'change_log.md'.</item>
+      <item>Log the change in the 'docs/cmmi-artifacts/change_log.md'.</item>
     </list>
     <p>Change Request:</p>
     <pre>{{args}}</pre>

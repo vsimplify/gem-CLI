@@ -5,9 +5,9 @@ prompt = """
   <context>
     <p>A change has been requested that affects the design specifications. Your tasks are to:</p>
     <list>
-      <item>Analyze the change and its impact on the 'design_specifications.md'.</item>
+      <item>Analyze the change and its impact on the 'docs/cmmi-artifacts/design_specifications.md'.</item>
       <item>Update the design documents, including diagrams and data models.</item>
-      <item>Log the change in the 'change_log.md'.</item>
+      <item>Log the change in the 'docs/cmmi-artifacts/change_log.md'.</item>
     </list>
     <p>Change Request:</p>
     <pre>{{args}}</pre>
