@@ -1,2 +1,3 @@
 name = "Deploy Bug Fix"
 description = "Create a deployment plan for releasing the fix to the target environment (e.g., Azure, Vercel) via a CI/CD pipeline."
+prompt = "Please provide the Bug ID for the bug fix you want to deploy."

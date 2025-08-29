@@ -1,2 +1,3 @@
 name = "Retest Bug"
 description = "Create and execute a test plan to validate that the fix has resolved the bug and has not introduced any regressions."
+prompt = "Please provide the Bug ID for the bug you want to retest."

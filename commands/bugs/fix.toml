@@ -1,2 +1,3 @@
 name = "Fix Bug"
 description = "Apply the code changes necessary to fix the bug identified in the analysis phase."
+prompt = "Please provide the Bug ID and the code changes to fix the bug."

@@ -1,2 +1,3 @@
 name = "Analyze Bug"
 description = "Perform a root cause analysis using sequential-thinking and chain-of-thought MCPs to investigate logs, code, and configurations to pinpoint the root cause."
+prompt = "Please provide the Bug ID for the bug you want to analyze."
