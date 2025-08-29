@@ -1,0 +1,2 @@
+name = "Retest Bug"
+description = "Create and execute a test plan to validate that the fix has resolved the bug and has not introduced any regressions."

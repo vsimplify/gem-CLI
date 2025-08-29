@@ -1,0 +1,2 @@
+name = "Fix Bug"
+description = "Apply the code changes necessary to fix the bug identified in the analysis phase."
