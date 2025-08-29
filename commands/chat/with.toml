@@ -1,0 +1,31 @@
+
+# Command to initiate a chat session with context from project artifacts.
+name = "chat with"
+description = "Initiates a chat session with the context of a specific bug, tag, or component."
+
+# The argument can be a bug ID, tag, or component name.
+argument = "identifier"
+
+# Steps to execute the command.
+[[steps]]
+  # Step 1: Find relevant artifacts.
+  name = "find_artifacts"
+  description = "Finds all artifacts matching the identifier in the 'docs/cmmi-artifacts' directory."
+  # This would be a shell command that uses 'grep' or a similar tool to search the file contents.
+  # The actual implementation of this step will be handled by the execution engine.
+  command = "grep -r -l '${identifier}' docs/cmmi-artifacts"
+
+[[steps]]
+  # Step 2: Load artifacts into context.
+  name = "load_context"
+  description = "Loads the content of the found artifacts into the chat context."
+  # This step would involve reading the files found in the previous step and making their content available to the chat session.
+  # The implementation will be handled by the execution engine.
+  command = "xargs -I {} cat {}" # This is a simplified example.
+
+[[steps]]
+  # Step 3: Start chat session.
+  name = "start_chat"
+  description = "Starts an interactive chat session with the user."
+  # This would be a command that initiates the chat interface.
+  command = "gemini-chat" # Placeholder for the actual chat command.
