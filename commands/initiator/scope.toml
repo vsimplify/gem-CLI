@@ -20,3 +20,8 @@ prompt = """
   </task>
 </poml>
 """
+
+[[steps]]
+  name = "update_user_guide"
+  description = "Updates the user guide with the latest changes."
+  command = "sh commands/sh/update_user_guide.sh"

@@ -29,3 +29,8 @@ argument = "identifier"
   description = "Starts an interactive chat session with the user."
   # This would be a command that initiates the chat interface.
   command = "gemini-chat" # Placeholder for the actual chat command.
+
+[[steps]]
+  name = "update_user_guide"
+  description = "Updates the user guide with the latest changes."
+  command = "sh commands/sh/update_user_guide.sh"

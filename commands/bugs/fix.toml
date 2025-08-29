@@ -1,3 +1,8 @@
 name = "Fix Bug"
 description = "Apply the code changes necessary to fix the bug identified in the analysis phase."
 prompt = "Please provide the Bug ID and the code changes to fix the bug."
+
+[[steps]]
+  name = "update_user_guide"
+  description = "Updates the user guide with the latest changes."
+  command = "sh commands/sh/update_user_guide.sh"

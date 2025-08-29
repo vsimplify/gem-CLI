@@ -11,4 +11,4 @@
 
 | Agent Name | Description |
 |---|---|
-| Chat Agent | Responsible for handling the context-aware chat functionality. |
+| Discussion Agent | Responsible for handling the context-aware discussion functionality. |

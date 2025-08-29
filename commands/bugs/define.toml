@@ -1,3 +1,8 @@
 name = "Define Bug"
 description = "Formally define the bug, its observed behavior, and the expected correct behavior. A unique bug ID will be generated for each bug."
 prompt = "Please provide a detailed description of the bug, including steps to reproduce, observed vs. expected behavior, and any relevant environment details. A unique Bug ID will be assigned upon definition."
+
+[[steps]]
+  name = "update_user_guide"
+  description = "Updates the user guide with the latest changes."
+  command = "sh commands/sh/update_user_guide.sh"

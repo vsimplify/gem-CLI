@@ -1,3 +1,8 @@
 name = "Deploy Bug Fix"
 description = "Create a deployment plan for releasing the fix to the target environment (e.g., Azure, Vercel) via a CI/CD pipeline."
 prompt = "Please provide the Bug ID for the bug fix you want to deploy."
+
+[[steps]]
+  name = "update_user_guide"
+  description = "Updates the user guide with the latest changes."
+  command = "sh commands/sh/update_user_guide.sh"

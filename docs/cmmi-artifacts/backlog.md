@@ -1,13 +1,17 @@
 # Project Backlog
 
-## Version 1.0
+## Focus Area: Core Framework
 
-| ID | Component | Feature | Description |
-|---|---|---|---|
-| 1 | Core | Initial Project Setup | Set up the initial project structure and configuration. |
+### Capability: Project Initialization
 
-## Version 1.1
+| ID | Tag | Description |
+|---|---|---|
+| 1 | setup, core | Set up the initial project structure and configuration. |
 
-| ID | Component | Feature | Description |
-|---|---|---|---|
-| 2 | Chat | Context-Aware Chat | Implement a context-aware chat feature that can load information from project artifacts. |
+## Focus Area: User Interaction
+
+### Capability: Contextual Discussion
+
+| ID | Tag | Description |
+|---|---|---|
+| 2 | chat, context, troubleshooting | Implement a context-aware discussion feature that can load information from project artifacts. |

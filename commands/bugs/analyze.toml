@@ -1,3 +1,8 @@
 name = "Analyze Bug"
 description = "Perform a root cause analysis using sequential-thinking and chain-of-thought MCPs to investigate logs, code, and configurations to pinpoint the root cause."
 prompt = "Please provide the Bug ID for the bug you want to analyze."
+
+[[steps]]
+  name = "update_user_guide"
+  description = "Updates the user guide with the latest changes."
+  command = "sh commands/sh/update_user_guide.sh"

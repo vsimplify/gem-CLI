@@ -26,3 +26,7 @@ All artifacts created in the `docs/cmmi-artifacts` folder must adhere to the fol
 *   **Component Name:** Each artifact must be associated with a component name from the backlog.
 
 This standard is enforced to support the context-aware chat functionality and ensure proper artifact management.
+
+### 4. User Guide Automation
+
+A new rule has been implemented to ensure the `User-Guide_TheDynamicCMMI-AgileWorkflow.md` is always up-to-date. With every invocation of a TOML file, the system will automatically update the user guide with the latest changes from the `change_log.md`.
