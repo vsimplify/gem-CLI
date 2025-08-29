@@ -24,3 +24,9 @@
 | Agent Name | Description |
 |---|---|
 | Feedback Agent | Responsible for collecting and processing user feedback after each conversation to drive continuous self-improvement of the AI agents. |
+
+## Version 1.4
+
+| Agent Name | Description |
+|---|---|
+| I2-GEMINI-BACKEND | Backend Development Specialist responsible for automated bug fixing, deployment, and infrastructure optimization. |
