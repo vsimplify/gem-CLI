@@ -18,3 +18,9 @@
 | Agent Name | Description |
 |---|---|
 | Logging Agent | Responsible for comprehensive logging of all command invocations and the outcomes of `/discuss` sessions, ensuring traceability and auditability. |
+
+## Version 1.3
+
+| Agent Name | Description |
+|---|---|
+| Feedback Agent | Responsible for collecting and processing user feedback after each conversation to drive continuous self-improvement of the AI agents. |

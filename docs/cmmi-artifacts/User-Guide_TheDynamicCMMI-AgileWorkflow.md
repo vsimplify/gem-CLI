@@ -46,6 +46,10 @@ To ensure complete traceability and auditability, all outcomes from `/discuss` c
 
 To enhance clarity and understanding, this framework encourages the use of Markdown with Mermaid diagrams (e.g., sequence diagrams, flowcharts, Gantt charts, topology diagrams) to explain concepts, workflows, and system architectures. This visual approach aids in better communication and comprehension of complex ideas.
 
+### Feedback for Self-Improvement
+
+This framework incorporates a continuous feedback loop to enhance the performance and accuracy of the AI agents. After each significant conversation or task completion, the system will prompt for user feedback. This feedback is crucial for the AI to learn, adapt, and improve its responses and actions over time, ensuring a more effective and tailored experience for future interactions.
+
 ## Workflow in Action: An Activity Plan
 
 This section outlines the typical flow of activities when running a project using this framework.
