@@ -1,0 +1,23 @@
+name = "prompt"
+description = "Logs a command prompt."
+
+parameters = [
+  {
+    name = "prompt_text",
+    type = "string",
+    description = "The text of the command prompt."
+  }
+]
+
+steps = [
+  {
+    type = "tool_code",
+    tool_name = "write_file",
+    args = {
+      file_path = "docs/cmmi-artifacts/prompt_log.md",
+      content = "\n## Prompt Log Entry: {{timestamp}}\n\n{{prompt_text}}\n",
+      append = true
+    }
+  }
+]
+

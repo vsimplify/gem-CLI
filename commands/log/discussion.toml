@@ -1,0 +1,23 @@
+name = "discussion"
+description = "Logs the outcome of a discussion."
+
+parameters = [
+  {
+    name = "summary",
+    type = "string",
+    description = "A summary of the discussion outcome."
+  }
+]
+
+steps = [
+  {
+    type = "tool_code",
+    tool_name = "write_file",
+    args = {
+      file_path = "docs/cmmi-artifacts/discussion_log.md",
+      content = "\n## Discussion Log Entry: {{timestamp}}\n\n{{summary}}\n",
+      append = true
+    }
+  }
+]
+

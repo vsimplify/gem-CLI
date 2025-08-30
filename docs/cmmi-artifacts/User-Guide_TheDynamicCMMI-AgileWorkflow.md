@@ -73,9 +73,35 @@ Upon execution, the `/discuss` command will:
 
 Every time you use a `change.toml` command, a record is added to this central log. This creates a complete, auditable history of every modification made to the project, ensuring that the context is never lost, even when steps are re-run. Additionally, all artifacts created in the `docs/cmmi-artifacts` folder must now include a unique ID, relevant tags, and the associated Capability name (serving as the component identifier).
 
-### Comprehensive Logging (`discussion_log.md`)
+### Comprehensive Logging
 
-To ensure complete traceability and auditability, all outcomes from `/discuss` commands are now logged in `discussion_log.md`. Furthermore, every prompt provided by invoking any command is also recorded. This provides a detailed history of interactions and decisions.
+To ensure complete traceability and auditability, all outcomes from `/discuss` commands are now logged in `discussion_log.md`. Furthermore, every prompt provided by invoking any command is also recorded in `prompt_log.md`. This provides a detailed history of interactions and decisions.
+
+**Workflow:**
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant GeminiCLI
+    participant Command
+    participant LoggingAgent
+    participant DiscussionLog
+    participant PromptLog
+
+    User->>GeminiCLI: Execute Command (with prompt)
+    GeminiCLI->>LoggingAgent: Log Prompt
+    LoggingAgent->>PromptLog: Append prompt
+    GeminiCLI->>Command: Run
+    Command-->>GeminiCLI: Complete
+    alt If /discuss command
+        GeminiCLI->>LoggingAgent: Log Discussion Outcome
+        LoggingAgent->>DiscussionLog: Append summary
+    end
+```
+
+**Implementation:**
+
+The comprehensive logging is implemented through the `Logging Agent` and the `/commands/log/discussion.toml` and `/commands/log/prompt.toml` commands. The `Logging Agent` is responsible for executing these commands. Every command execution will trigger a prompt logging, and `/discuss` commands will also trigger discussion outcome logging.
 
 ### Explaining Concepts with Visuals
 
@@ -84,6 +110,29 @@ To enhance clarity and understanding, this framework encourages the use of Markd
 ### Feedback for Self-Improvement
 
 This framework incorporates a continuous feedback loop to enhance the performance and accuracy of the AI agents. After each significant conversation or task completion, the system will prompt for user feedback. This feedback is crucial for the AI to learn, adapt, and improve its responses and actions over time, ensuring a more effective and tailored experience for future interactions.
+
+**Workflow:**
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant GeminiCLI
+    participant Command
+    participant FeedbackAgent
+    participant Memory
+
+    User->>GeminiCLI: Execute Command
+    GeminiCLI->>Command: Run
+    Command-->>GeminiCLI: Complete
+    GeminiCLI->>FeedbackAgent: Trigger Feedback
+    FeedbackAgent->>User: Prompt for feedback
+    User-->>FeedbackAgent: Provide feedback
+    FeedbackAgent->>Memory: Save feedback
+```
+
+**Implementation:**
+
+The feedback mechanism is implemented through the `Feedback Agent` and the `/commands/feedback/feedback.toml` command. After each command is executed, the `Feedback Agent` is triggered. It runs the `feedback.toml` command, which prompts the user for feedback and then saves the feedback to the agent's memory using the `save_memory` tool.
 
 ## Workflow in Action: An Activity Plan
 

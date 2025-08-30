@@ -1,5 +1,31 @@
 ## Change Log Entry: August 29, 2025
 
+### Change Request: Implement Comprehensive Audit Log
+
+**Rationale:** To establish a comprehensive audit trail for all system activities, including command prompts and discussion outcomes, ensuring traceability and accountability.
+
+**Impacted Artifacts:**
+*   `docs/cmmi-artifacts/prompt_log.md`: Created a new log file for command prompts.
+*   `docs/cmmi-artifacts/identified_agents.md`: Added a new `Logging Agent`.
+*   `docs/cmmi-artifacts/backlog.md`: Added a new `Focus Area: Auditing and Logging` and a `Comprehensive Audit Trail` capability.
+*   `commands/log/discussion.toml`: Created a new command to log discussion outcomes.
+*   `commands/log/prompt.toml`: Created a new command to log command prompts.
+*   `docs/cmmi-artifacts/User-Guide_TheDynamicCMMI-AgileWorkflow.md`: Updated the documentation to include a detailed explanation and a mermaid diagram of the comprehensive logging workflow.
+
+## Change Log Entry: August 29, 2025
+
+### Change Request: Implement Feedback Mechanism for Self-Improvement
+
+**Rationale:** To implement a feedback mechanism that allows the agent to learn and improve from user interactions.
+
+**Impacted Artifacts:**
+*   `docs/cmmi-artifacts/identified_agents.md`: Added a new `Feedback Agent`.
+*   `docs/cmmi-artifacts/backlog.md`: Added a new `Focus Area: Self-Improvement` and a `Feedback Mechanism` capability.
+*   `commands/feedback/feedback.toml`: Created a new command to collect and store user feedback.
+*   `docs/cmmi-artifacts/User-Guide_TheDynamicCMMI-AgileWorkflow.md`: Updated the documentation to include a detailed explanation and a mermaid diagram of the feedback workflow.
+
+## Change Log Entry: August 29, 2025
+
 ### Change Request: Implement Context-Aware Discussion Feature
 
 **Rationale:** To enhance the `/discuss` command to use file content as context for a chat session, providing a more robust and context-aware discussion capability.

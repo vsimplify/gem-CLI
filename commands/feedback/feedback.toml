@@ -1,0 +1,25 @@
+name = "feedback"
+description = "Collects user feedback after a command execution."
+
+parameters = [
+  {
+    name = "previous_command",
+    type = "string",
+    description = "The name of the command that was just executed."
+  }
+]
+
+steps = [
+  {
+    type = "prompt",
+    message = "Was this helpful? Your feedback is valuable for my improvement.",
+    output_to = "user_feedback"
+  },
+  {
+    type = "tool_code",
+    tool_name = "save_memory",
+    args = {
+      fact = "[{{timestamp}}] Feedback for {{previous_command}}: {{user_feedback}}"
+    }
+  }
+]

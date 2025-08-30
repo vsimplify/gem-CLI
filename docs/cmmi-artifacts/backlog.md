@@ -46,3 +46,35 @@
 - ID: AGENT-FEAT-002
 - Tags: Chat, Agent
 - Description: Initiate a chat session with the loaded file content as context.
+
+## Focus Area: Self-Improvement
+### Capability: Feedback Mechanism
+- ID: SI-CAP-001
+- Tags: Feedback, Self-Improvement
+- Description: A mechanism for collecting and storing user feedback to enable continuous self-improvement.
+
+#### Feature: Prompt for Feedback
+- ID: SI-FEAT-001
+- Tags: Feedback, Prompt
+- Description: Proactively prompt the user for feedback after each command execution.
+
+#### Feature: Store Feedback
+- ID: SI-FEAT-002
+- Tags: Feedback, Memory
+- Description: Store the user's feedback in the agent's memory for future analysis.
+
+## Focus Area: Auditing and Logging
+### Capability: Comprehensive Audit Trail
+- ID: AUDIT-CAP-001
+- Tags: Audit, Logging, Traceability
+- Description: Establish a comprehensive audit trail for all system activities, including command prompts and discussion outcomes.
+
+#### Feature: Log Discussion Outcomes
+- ID: AUDIT-FEAT-001
+- Tags: Discussion, Logging
+- Description: Log the outcomes of all `/discuss` command conversations to `discussion_log.md`.
+
+#### Feature: Log Command Prompts
+- ID: AUDIT-FEAT-002
+- Tags: Command, Logging
+- Description: Log every prompt provided to any TOML file in the framework to `prompt_log.md`.
