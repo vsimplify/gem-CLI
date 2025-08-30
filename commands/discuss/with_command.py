@@ -15,9 +15,14 @@ def run(identifier):
 
         if absolute_file_path.exists() and absolute_file_path.is_file():
             print(f"Identified file for context loading: {absolute_file_path}")
-            # In a real scenario, the agent would now call default_api.read_file(absolute_path=str(absolute_file_path))
-            # For this fix, we'll just indicate that the file is recognized.
-            print("File recognized. Context loading logic needs to be implemented by the agent.")
+            # Read the file content
+            try:
+                with open(absolute_file_path, 'r') as f:
+                    content = f.read()
+                print("File content loaded successfully:")
+                print(content)
+            except Exception as e:
+                print(f"Error reading file: {e}")
         else:
             print(f"Error: File not found or is not a file: {absolute_file_path}")
             print("Initiating context-aware discussion session without file context.")

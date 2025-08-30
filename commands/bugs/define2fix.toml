@@ -1,0 +1,57 @@
+name = "define2fix"
+description = "A continuous workflow to define, analyze, fix, retest, and deploy a bug fix."
+
+parameters = [
+  {
+    name = "bug_description",
+    type = "string",
+    description = "The description of the bug to be fixed."
+  }
+]
+
+steps = [
+  {
+    type = "tool_code",
+    tool_name = "commands/bugs/define",
+    args = {
+      description = "{{bug_description}}"
+    },
+    output_to = "defined_bug"
+  },
+  # Looping logic to be implemented here.
+  # For now, we will execute the sequence once.
+  {
+    type = "tool_code",
+    tool_name = "commands/bugs/analyze",
+    args = {
+      bug_id = "{{defined_bug.id}}"
+    },
+    output_to = "analysis_result"
+  },
+  {
+    type = "tool_code",
+    tool_name = "commands/bugs/fix",
+    args = {
+      bug_id = "{{defined_bug.id}}",
+      analysis = "{{analysis_result}}"
+    },
+    output_to = "fix_result"
+  },
+  {
+    type = "tool_code",
+    tool_name = "commands/bugs/retest",
+    args = {
+      bug_id = "{{defined_bug.id}}",
+      fix = "{{fix_result}}"
+    },
+    output_to = "retest_result"
+  },
+  {
+    type = "tool_code",
+    tool_name = "commands/bugs/deploy",
+    args = {
+      bug_id = "{{defined_bug.id}}",
+      retest_result = "{{retest_result}}"
+    }
+  }
+]

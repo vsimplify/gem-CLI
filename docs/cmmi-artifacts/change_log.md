@@ -1,5 +1,16 @@
 ## Change Log Entry: August 29, 2025
 
+### Change Request: Implement "@commands/bugs/define2fix" Command
+
+**Rationale:** To create a composite command that orchestrates the entire bug fixing workflow, from definition to deployment, in a continuous and automated manner.
+
+**Impacted Artifacts:**
+*   `docs/cmmi-artifacts/backlog.md`: Added a new task `BUGS-TASK-001` to implement the `@commands/bugs/define2fix.toml` command.
+*   `commands/bugs/define2fix.toml`: Created a new command file that defines the `define2fix` workflow.
+*   `docs/cmmi-artifacts/define2fix_workflow.md`: Created a new documentation file to explain the `define2fix` workflow with a sequence diagram.
+
+## Change Log Entry: August 29, 2025
+
 ### Change Request: Add Feedback Mechanism for Self-Improvement.
 
 **Rationale:** To enable continuous self-improvement of AI agents by collecting user feedback after each conversation.
