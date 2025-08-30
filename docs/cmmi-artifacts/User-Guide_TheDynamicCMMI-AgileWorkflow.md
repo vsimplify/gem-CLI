@@ -45,11 +45,28 @@ The `/discuss` command initiates a context-aware chat session, allowing for real
 
 *   `<question>`: This is the initial question or prompt to kickstart the chat session. It should clearly state what you want to discuss or troubleshoot.
 
+**Workflow:**
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant GeminiCLI
+    participant with_command.py
+    participant ChatSession
+
+    User->>GeminiCLI: /discuss @path/to/file.toml "My question"
+    GeminiCLI->>with_command.py: Execute with file path
+    with_command.py-->>GeminiCLI: Returns JSON: {"context": "file content"}
+    GeminiCLI->>ChatSession: Start new chat
+    GeminiCLI->>ChatSession: Prepend context to chat history
+    ChatSession-->>User: Respond to question with context
+```
+
 **Outcomes:**
 Upon execution, the `/discuss` command will:
-1.  **Search for Relevant Artifacts:** Based on the provided `<identifier>`, the system will search through CMMI artifacts (e.g., backlog, identified agents, change log) to gather relevant information. If a file path is provided, the content of that file will be loaded.
-2.  **Load Context:** The retrieved information and/or file content will be loaded into the chat session as context.
-3.  **Initiate Chat Session:** A context-aware chat session will begin, allowing you to interact with the agent, ask follow-up questions, and collaboratively troubleshoot issues, with the loaded context guiding the discussion.
+1.  **Execute Script:** The `commands/discuss/with_command.py` script is executed with the file path as an argument.
+2.  **Return Context:** The script reads the file and returns its content in a JSON object with a `context` key.
+3.  **Initiate Chat Session:** The Gemini CLI agent parses the JSON output, extracts the context, and initiates a new chat session with the context prepended to the conversation history.
 
 
 ### The Change Log (`change_log.md`)

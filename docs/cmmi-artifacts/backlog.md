@@ -30,3 +30,19 @@
 - ID: BUGS-TASK-001
 - Tags: Implementation, TOML
 - Description: Implement the `@commands/bugs/define2fix.toml` command to orchestrate the bug fixing workflow.
+
+## Focus Area: Agent Capabilities
+### Capability: Context-Aware Discussion
+- ID: AGENT-CAP-001
+- Tags: Chat, Context
+- Description: Enable the agent to conduct context-aware discussions based on file content.
+
+#### Feature: Load File Context
+- ID: AGENT-FEAT-001
+- Tags: File, Context
+- Description: Load the content of a file specified with the `@` notation in the `/discuss` command.
+
+#### Feature: Initiate Chat Session
+- ID: AGENT-FEAT-002
+- Tags: Chat, Agent
+- Description: Initiate a chat session with the loaded file content as context.

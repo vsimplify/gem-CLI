@@ -15,14 +15,14 @@ def run(identifier):
 
         if absolute_file_path.exists() and absolute_file_path.is_file():
             print(f"Identified file for context loading: {absolute_file_path}")
-            # Read the file content
+            # Read the file content and output as JSON
+            import json
             try:
                 with open(absolute_file_path, 'r') as f:
                     content = f.read()
-                print("File content loaded successfully:")
-                print(content)
+                print(json.dumps({"context": content}))
             except Exception as e:
-                print(f"Error reading file: {e}")
+                print(json.dumps({"error": f"Error reading file: {e}"}))
         else:
             print(f"Error: File not found or is not a file: {absolute_file_path}")
             print("Initiating context-aware discussion session without file context.")
